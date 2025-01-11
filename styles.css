@@ -916,3 +916,117 @@ h1, h2, h3 {
     padding: 1rem;
     border-radius: 10px;
 } 
+
+
+.education-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.education-flip-card {
+    background-color: transparent;
+    width: 350px;
+    height: 400px;
+    perspective: 1000px;
+    margin: 1rem;
+}
+
+.education-flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.education-flip-card:hover .education-flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.education-flip-card-front, .education-flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.education-flip-card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.education-flip-card-front i {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.education-flip-card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.education-flip-card-front h3,
+.education-flip-card-back h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.education-flip-card-back .institution {
+    color: #d4d4d4;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.education-flip-card-back .year {
+    color: #a0a0a0;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.education-flip-card-back .description {
+    color: white;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.education-flip-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, #333, #666, #333);
+    border-radius: 15px;
+    z-index: -1;
+    animation: borderGlow 3s linear infinite;
+}
+
+/* Add hover effect */
+.education-flip-card:hover {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+    .education-flip-card {
+        width: 300px;
+        height: 350px;
+    }
+}
