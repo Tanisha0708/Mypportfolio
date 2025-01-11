@@ -12,6 +12,10 @@
     <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.globe.min.js"></script>
 </head>
 <body id="vanta-bg">
+     <audio id="greeting-audio" preload="auto">
+    <source src="greeting.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
     <div id="vanta-globe"></div>
     <nav id="navbar">
         <div class="nav-content">
@@ -36,8 +40,13 @@
         </div>
     </nav>
 
-         
-        
+         <div id="welcome-overlay" class="welcome-overlay">
+    <div class="welcome-content">
+        <h2>Welcome to My Portfolio</h2>
+        <button id="enter-button">Click to Enter</button>
+    </div>
+</div>
+       
           
     <main>
         <section id="home">
