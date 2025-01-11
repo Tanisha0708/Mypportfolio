@@ -45,6 +45,11 @@ html {
         font-size: 2rem;
         margin-bottom: 2rem;
     }
+.logo img {
+    height: 50px; /* Adjust as needed */
+    width: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Change cursor to pointer for clickable logo */
+}
 
     #home h1 {
         font-size: 2.5rem;
