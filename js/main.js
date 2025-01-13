@@ -152,25 +152,3 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
 // Add this to your main.js file
-document.addEventListener('DOMContentLoaded', function() {
-    const loadingScreen = document.getElementById('loading-screen');
-    const welcomeOverlay = document.getElementById('welcome-overlay');
-    
-    // Hide the welcome overlay initially
-    welcomeOverlay.style.display = 'none';
-    
-    // After 2 seconds, fade out loading screen and show welcome overlay
-    setTimeout(() => {
-        loadingScreen.style.opacity = '0';
-        setTimeout(() => {
-            loadingScreen.style.display = 'none';
-            welcomeOverlay.style.display = 'flex';
-            // Play the greeting audio if it exists
-            const greetingAudio = document.getElementById('greeting-audio');
-            if (greetingAudio) {
-                greetingAudio.play().catch(e => console.log('Audio autoplay prevented'));
-            }
-        }, 500);
-    }, 2000);
-});
-    });
