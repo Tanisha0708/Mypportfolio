@@ -163,31 +163,6 @@ html {
         padding: 0.8rem 1.5rem;
     }
 }
-<style>
-.dynamic-text {
-    min-height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.cursor {
-    display: inline-block;
-    width: 3px;
-    margin-left: 3px;
-    animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
-
-#typing-text {
-    color: #2196F3;  /* You can change this color */
-    font-weight: 600;
-}
-</style>
 
 /* Dynamic Text Responsive */
 @media (max-width: 768px) {
