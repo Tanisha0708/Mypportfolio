@@ -16,6 +16,90 @@ html {
     }
 }
 
+/* Laptop and Larger Screen Styles */
+@media (min-width: 1025px) {
+    html {
+        font-size: 17px;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 3rem;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 5rem 4rem;
+    }
+
+    section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    #home h1 {
+        font-size: 3.5rem;
+    }
+
+    #home p {
+        font-size: 1.8rem;
+    }
+
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .profile-card img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .profile-card h3 {
+        font-size: 2rem;
+    }
+
+    .skills-grid {
+        display: flex;
+        justify-content: space-around;
+        padding: 2rem 0;
+    }
+
+    .skill-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    #contact-form {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    input, textarea {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+    }
+}
+
 /* Navigation Responsive Styles */
 @media (max-width: 768px) {
     .nav-content {
@@ -45,11 +129,12 @@ html {
         font-size: 2rem;
         margin-bottom: 2rem;
     }
-.logo img {
-    height: 50px; /* Adjust as needed */
-    width: auto; /* Maintain aspect ratio */
-    cursor: pointer; /* Change cursor to pointer for clickable logo */
-}
+
+    .logo img {
+        height: 50px;
+        width: auto;
+        cursor: pointer;
+    }
 
     #home h1 {
         font-size: 2.5rem;
@@ -73,65 +158,6 @@ html {
     }
 }
 
-/* Profile Card Responsive */
-@media (max-width: 768px) {
-    .profile-card {
-        padding: 1rem;
-    }
-
-    .profile-card img {
-        width: 200px;
-        height: 200px;
-    }
-
-    .profile-card h3 {
-        font-size: 1.5rem;
-    }
-}
-
-/* Skills Section Responsive */
-@media (max-width: 768px) {
-    .skills-nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        top: 60px;
-        margin: 1rem auto;
-    }
-
-    .skill-nav-btn {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-    }
-
-    .technical-skills, 
-    .cybersecurity-skills, 
-    .soft-skills {
-        padding: 1rem;
-    }
-
-    .skills-container {
-        padding: 0 1rem;
-    }
-}
-
-/* Flip Card Responsive */
-@media (max-width: 768px) {
-    .flip-card {
-        height: 400px;
-    }
-
-    .flip-card-front h3,
-    .flip-card-back h3 {
-        font-size: 1.5rem;
-    }
-
-    .flip-card-front img,
-    .flip-card-back img {
-        width: 100px;
-        height: 100px;
-    }
-}
-
 /* Social Links Responsive */
 @media (max-width: 768px) {
     .social-links {
@@ -149,101 +175,7 @@ html {
     }
 }
 
-/* Contact Form Responsive */
-@media (max-width: 768px) {
-    #contact-form {
-        width: 90%;
-    }
-
-    input, textarea {
-        padding: 0.8rem;
-    }
-
-    button {
-        padding: 0.8rem 1.5rem;
-    }
-}
-
-/* Dynamic Text Responsive */
-@media (max-width: 768px) {
-    .dynamic-text h2 {
-        font-size: 1.8rem;
-    }
-
-    .typed-text {
-        font-size: 1.8rem;
-    }
-}
-
-/* Skills Grid Responsive */
-@media (max-width: 768px) {
-    .skills-grid {
-        flex-direction: column;
-    }
-
-    .marquee {
-        padding: 0.5rem 0;
-    }
-
-    .skill-item {
-        margin: 0 0.5rem;
-    }
-
-    .skill-item img {
-        width: 40px;
-        height: 40px;
-    }
-}
-
-/* Additional Mobile Optimizations */
-@media (max-width: 480px) {
-    .section-title {
-        margin-top: -2rem;
-        padding: 0.5rem 1rem;
-    }
-
-    .project-card {
-        padding: 1rem;
-    }
-
-    .tech-stack span {
-        padding: 0.3rem 0.8rem;
-        font-size: 0.8rem;
-    }
-
-    .about-text {
-        max-height: 200px;
-    }
-}
-
-/* Tablet Specific Optimizations */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    section {
-        padding: 3rem;
-    }
-
-    .skills-nav {
-        max-width: 90%;
-    }
-}
-
-/* Landscape Mode Optimization */
-@media (max-height: 500px) and (orientation: landscape) {
-    .flip-card {
-        height: 300px;
-    }
-
-    section {
-        min-height: auto;
-        padding: 2rem;
-    }
-}
-
-/* High Resolution Screens */
+/* High-Resolution Screens */
 @media (min-width: 1400px) {
     .container {
         max-width: 1320px;
